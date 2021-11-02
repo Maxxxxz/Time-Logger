@@ -30,7 +30,7 @@ wxEND_EVENT_TABLE()
 wxIMPLEMENT_APP(MyApp);
 bool MyApp::OnInit()
 {
-    MyFrame *frame = new MyFrame( "Hello World", wxPoint(50, 50), wxSize(450, 340) );
+    MyFrame *frame = new MyFrame( "Hello World", wxPoint(50, 50), wxSize(500, 500) );
     frame->Show( true );
     return true;
 }
