@@ -13,6 +13,7 @@
 #ifndef WX_PRECOMP
     #include <wx/wx.h>
 #endif
+
 class MyApp: public wxApp
 {
 public:
@@ -20,6 +21,7 @@ public:
 private:
     Conf cfg;
 };
+
 class MyFrame: public wxFrame
 {
 public:
@@ -31,16 +33,20 @@ private:
     wxDECLARE_EVENT_TABLE();
     Conf cfg;
 };
+
 enum
 {
     ID_Hello = 1
 };
+
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(ID_Hello,   MyFrame::OnHello)
     EVT_MENU(wxID_EXIT,  MyFrame::OnExit)
     EVT_MENU(wxID_ABOUT, MyFrame::OnAbout)
 wxEND_EVENT_TABLE()
+
 wxIMPLEMENT_APP(MyApp);
+
 bool MyApp::OnInit()
 {
 
@@ -48,10 +54,16 @@ bool MyApp::OnInit()
 
     this->cfg = Config::getInstance().getConf();
 
-    MyFrame *frame = new MyFrame( this->cfg, this->cfg.about_title, wxPoint(50, 50), wxSize(500, 500) );
+    MyFrame *frame = new MyFrame(
+        this->cfg,
+        this->cfg.about_title,
+        wxPoint(this->cfg.top_level_window_pos_x, this->cfg.top_level_window_pos_y),
+        wxSize(this->cfg.top_level_window_length, this->cfg.top_level_window_height)
+        );
     frame->Show( true );
     return true;
 }
+
 MyFrame::MyFrame(const Conf& cfg, const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
@@ -70,15 +82,18 @@ MyFrame::MyFrame(const Conf& cfg, const wxString& title, const wxPoint& pos, con
     CreateStatusBar();
     SetStatusText( "Welcome to wxWidgets!" );
 }
+
 void MyFrame::OnExit(wxCommandEvent& event)
 {
     Close( true );
 }
+
 void MyFrame::OnAbout(wxCommandEvent& event)
 {
     wxMessageBox( "This is a wxWidgets' Hello world sample",
                   "About Hello World", wxOK | wxICON_INFORMATION );
 }
+
 void MyFrame::OnHello(wxCommandEvent& event)
 {
     wxLogMessage("Hello world from wxWidgets!");

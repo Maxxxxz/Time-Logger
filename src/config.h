@@ -6,6 +6,16 @@
 typedef struct Conf
 {
     std::string LANG = "MISSING";
+    
+    // Positons
+    int top_level_window_pos_x = 50;
+    int top_level_window_pos_y = 100;
+    int top_level_window_length = 500;
+    int top_level_window_height = 250;
+
+    // Sizes
+
+
     // About
     std::string about_name = "MISSING";
     std::string about_software = "MISSING";

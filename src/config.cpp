@@ -9,9 +9,17 @@ void Config::loadSettings(const std::string& settings_filename)
     {
         // settings_filename will only contain settings, including selected language.
         // Based on the selected language, we will search the languages folder 
-        YAML::Node settings = YAML::LoadFile(settings_filename);
-        
-        this->cfg.LANG = settings["language"].as<std::string>();
+
+        {
+            YAML::Node settings = YAML::LoadFile(settings_filename);
+            
+            this->cfg.LANG = settings["language"].as<std::string>();
+            this->cfg.top_level_window_pos_x = settings["positions"]["top-level-window-pos-x"].as<int>();
+            this->cfg.top_level_window_pos_y = settings["positions"]["top-level-window-pos-y"].as<int>();
+            this->cfg.top_level_window_length = settings["sizes"]["top-level-window-length"].as<int>();
+            this->cfg.top_level_window_height = settings["sizes"]["top-level-window-height"].as<int>();
+
+        }
 
         auto lang_filename = "./lang/" + this->cfg.LANG + ".yaml";
 
