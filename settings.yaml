@@ -1,13 +1,1 @@
-about:
-  name: "Michael Cooper"
-  software: "Time Logger"
-  title: "Michael's Time Logger"
-  version: 0.0.1
-  website: "maxxxxz.github.io"
-
-menu-text:
-  file: "File"
-  help: "Help"
-
-calendar-log:
-  title: "Calendar Log"
+language: 'en'
