@@ -68,8 +68,6 @@ TLFrame::TLFrame(const Conf& cfg, const wxString& title, const wxPoint& pos, con
     menuBar->Append( menuFile, this->cfg.menu_file );
     menuBar->Append( menuHelp, this->cfg.menu_help );
     SetMenuBar( menuBar );
-    // CreateStatusBar();
-    SetStatusText( "Welcome to wxWidgets!" );
 }
 void TLFrame::OnExit(wxCommandEvent& event)
 {
