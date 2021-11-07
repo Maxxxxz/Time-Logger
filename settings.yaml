@@ -1,0 +1,11 @@
+language: 'en'
+
+default-open-frame: 0
+
+positions:
+  top-level-window-pos-x: 250
+  top-level-window-pos-y: 250
+
+sizes:
+  top-level-window-length: 500
+  top-level-window-height: 500
