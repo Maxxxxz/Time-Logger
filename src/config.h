@@ -6,7 +6,8 @@
 typedef struct Conf
 {
     std::string LANG = "MISSING";
-    
+    int default_open_frame = 0;
+
     // Positons
     int top_level_window_pos_x = 50;
     int top_level_window_pos_y = 100;
@@ -22,6 +23,7 @@ typedef struct Conf
     std::string about_title = "MISSING";
     std::string about_version = "MISSING";
     std::string about_website = "MISSING";
+    std::string about_text = "MISSING";
 
     // Menu Bar Text
     std::string menu_file = "MISSING";

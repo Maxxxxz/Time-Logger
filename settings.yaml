@@ -1,5 +1,7 @@
 language: 'en'
 
+default-open-frame: 0
+
 positions:
   top-level-window-pos-x: 250
   top-level-window-pos-y: 250

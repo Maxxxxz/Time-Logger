@@ -4,6 +4,9 @@ about:
   title: "Michael's Time Logger"
   version: 0.0.1
   website: "maxxxxz.github.io"
+  text: "This application is intended to keep track of your
+         time doing anything. Whether it be for productivity
+         purposes or to develop better time management skills."
 
 menu-text:
   file: "File"

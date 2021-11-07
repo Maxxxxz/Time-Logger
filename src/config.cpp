@@ -14,6 +14,7 @@ void Config::loadSettings(const std::string& settings_filename)
             YAML::Node settings = YAML::LoadFile(settings_filename);
             
             this->cfg.LANG = settings["language"].as<std::string>();
+            this->cfg.default_open_frame = settings["default-open-frame"].as<int>();
             this->cfg.top_level_window_pos_x = settings["positions"]["top-level-window-pos-x"].as<int>();
             this->cfg.top_level_window_pos_y = settings["positions"]["top-level-window-pos-y"].as<int>();
             this->cfg.top_level_window_length = settings["sizes"]["top-level-window-length"].as<int>();
@@ -31,6 +32,7 @@ void Config::loadSettings(const std::string& settings_filename)
         this->cfg.about_title = config["about"]["title"].as<std::string>();
         this->cfg.about_version = config["about"]["version"].as<std::string>();
         this->cfg.about_website = config["about"]["website"].as<std::string>();
+        this->cfg.about_text = config["about"]["text"].as<std::string>();
 
         // Menu Bar
         this->cfg.menu_file = config["menu-text"]["file"].as<std::string>();
