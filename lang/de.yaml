@@ -8,6 +8,7 @@ about:
 menu-text:
   file: "Datei"
   help: "Hilfe"
+  quit: "&Quit\tCtrl-Q"
 
 calendar-log:
   title: "Kalenderlogbuch"

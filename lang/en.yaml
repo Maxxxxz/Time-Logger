@@ -11,6 +11,7 @@ about:
 menu-text:
   file: "File"
   help: "Help"
+  quit: "&Quit\tCtrl-Q"
 
 calendar-log:
   title: "Calendar Log"

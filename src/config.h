@@ -28,6 +28,7 @@ typedef struct Conf
     // Menu Bar Text
     std::string menu_file = "MISSING";
     std::string menu_help = "MISSING";
+    std::string menu_quit = "MISSING";
 
     // Calendar Log
     std::string calendar_title = "MISSING";

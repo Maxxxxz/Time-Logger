@@ -61,7 +61,7 @@ TLFrame::TLFrame(const Conf& cfg, const wxString& title, const wxPoint& pos, con
     wxMenu *menuFile = new wxMenu;
     // Save / Backup / Export
     // menuFile->AppendSeparator();
-    menuFile->Append(wxID_EXIT, "&Quit\tCtrl-Q");
+    menuFile->Append(wxID_EXIT, this->cfg.menu_quit);
     wxMenu *menuHelp = new wxMenu;
     menuHelp->Append(wxID_ABOUT);
     wxMenuBar *menuBar = new wxMenuBar;

@@ -37,6 +37,7 @@ void Config::loadSettings(const std::string& settings_filename)
         // Menu Bar
         this->cfg.menu_file = config["menu-text"]["file"].as<std::string>();
         this->cfg.menu_help = config["menu-text"]["help"].as<std::string>();
+        this->cfg.menu_quit = config["menu-text"]["quit"].as<std::string>();
 
         // Calendar Log
         this->cfg.calendar_title = config["calendar-log"]["title"].as<std::string>();
