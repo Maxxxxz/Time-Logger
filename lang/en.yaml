@@ -9,8 +9,8 @@ about:
          purposes or to develop better time management skills."
 
 menu-text:
-  file: "File"
-  help: "Help"
+  file: "&File"
+  help: "&Help"
   quit: "&Quit\tCtrl-Q"
 
 calendar-log:

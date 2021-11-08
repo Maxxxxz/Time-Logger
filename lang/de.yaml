@@ -6,8 +6,8 @@ about:
   website: "maxxxxz.github.io"
 
 menu-text:
-  file: "Datei"
-  help: "Hilfe"
+  file: "&Datei"
+  help: "&Hilfe"
   quit: "&Quit\tCtrl-Q"
 
 calendar-log:
