@@ -18,6 +18,7 @@ include(${wxWidgets_USE_FILE})
 # Add our /src directory as a glob
 file(GLOB src_GLOB
   src/*.cpp
+  src/panels/*.cpp
 )
 
 # Executable

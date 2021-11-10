@@ -11,6 +11,8 @@
     const auto file = "";
 #endif
 
+#include "panels/CalendarPanel.h"
+
 IMPLEMENT_APP(TimeLogger)
 
 // Load up the user's chosen default frame
