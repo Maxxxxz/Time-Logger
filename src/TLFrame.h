@@ -6,6 +6,7 @@
 #endif
 
 #include "config.h"
+#include "panels/CalendarPanel.h"
 
 class TLFrame: public wxFrame
 {

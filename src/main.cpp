@@ -19,6 +19,7 @@ public:
     virtual bool OnInit();
 private:
     Conf cfg;
+    CalendarPanel* panelCalendar;
 };
 
 IMPLEMENT_APP(TimeLogger)
@@ -36,6 +37,9 @@ bool TimeLogger::OnInit()
         wxPoint(this->cfg.top_level_window_pos_x, this->cfg.top_level_window_pos_y),
         wxSize(this->cfg.top_level_window_length, this->cfg.top_level_window_height)
         );
+
+    this->panelCalendar = new CalendarPanel(frame);
+
     frame->Show( true );
     return true;
 }
