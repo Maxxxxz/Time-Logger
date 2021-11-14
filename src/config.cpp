@@ -22,7 +22,7 @@ void Config::loadSettings(const std::string& settings_filename)
 
         }
 
-        auto lang_filename = "./lang/" + this->cfg.LANG + ".yaml";
+        auto lang_filename = "../lang/" + this->cfg.LANG + ".yaml";
 
         YAML::Node config = YAML::LoadFile(lang_filename);
 

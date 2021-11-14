@@ -5,7 +5,7 @@
 #include "TLFrame.h"
 
 #ifdef _WIN32
-    const auto file = "./settings.yaml";
+    const auto file = "../settings.yaml";
 #endif
 #ifdef unix
     const auto file = "";
