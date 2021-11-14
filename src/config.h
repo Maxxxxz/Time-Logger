@@ -3,10 +3,15 @@
 
 #include <string>
 
+enum FRAMES {
+    CALENDAR = 0,
+    ISSUES = 1
+};
+
 typedef struct Conf
 {
     std::string LANG = "MISSING";
-    int default_open_frame = 0;
+    int default_open_frame = CALENDAR;
 
     // Positons
     int top_level_window_pos_x = 50;

@@ -1,11 +1,15 @@
+# The language the app will use.
 language: 'en'
 
+# The default window to open. 0 = Calendar | 1 = Issues
 default-open-frame: 0
 
+# The default positions of all items in the app.
 positions:
   top-level-window-pos-x: 250
   top-level-window-pos-y: 250
 
+# The default scaling of all items in the app.
 sizes:
   top-level-window-length: 500
   top-level-window-height: 500
