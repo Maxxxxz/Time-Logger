@@ -1,8 +1,11 @@
 #include <wx/wxprec.h>
+#include <wx/notebook.h>
 
 #include <string>
 #include "config.h"
 #include "TLFrame.h"
+#include "panels/CalendarPanel.h"
+#include "panels/TasksPanel.h"
 
 #ifdef _WIN32
     const auto file = "../settings.yaml";
@@ -11,15 +14,15 @@
     const auto file = "";
 #endif
 
-#include "panels/CalendarPanel.h"
-
 class TimeLogger : public wxApp
 {
 public:
     virtual bool OnInit();
 private:
     Conf cfg;
+    wxNotebook* panels;
     CalendarPanel* panelCalendar;
+    TasksPanel* panelTasks;
 };
 
 IMPLEMENT_APP(TimeLogger)
@@ -38,13 +41,17 @@ bool TimeLogger::OnInit()
         wxSize(this->cfg.top_level_window_length, this->cfg.top_level_window_height)
     );
 
-    // Move CalendarPanel to notebook
-    this->panelCalendar = new CalendarPanel(frame);
-
     // Create Notebook
     // Add CalendarPanel to Notebook
-    // Add IssuePanel to Notebook
+    // Add TaskPanel to Notebook
     // Utilize wxNotebook::SetSelection to set default tab selection
+    this->panels = new wxNotebook(frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_TOP);
+    
+    this->panelCalendar = new CalendarPanel((wxFrame*)this->panels);
+    this->panels->AddPage(this->panelCalendar, "Calendar");
+
+    this->panelTasks = new TasksPanel((wxFrame*)this->panels);
+    this->panels->AddPage(this->panelTasks, "Tasks");
 
     frame->Show( true );
     return true;

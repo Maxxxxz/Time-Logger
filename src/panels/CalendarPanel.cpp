@@ -18,5 +18,5 @@ void CalendarPanel::OnPaint(wxPaintEvent& evt)
     // Paint the 6 calendar dividing lines
     // ???
     wxPaintDC dc(this);
-    dc.DrawText(wxString::Format(wxT("%s"), "hello"), 50, 50);
+    dc.DrawText(wxString::Format(wxT("%s"), "Hello, calendar!"), 50, 50);
 }
