@@ -7,14 +7,6 @@
 
 #include "config.h"
 
-class TimeLogger: public wxApp
-{
-public:
-    virtual bool OnInit();
-private:
-    Conf cfg;
-};
-
 class TLFrame: public wxFrame
 {
 public:

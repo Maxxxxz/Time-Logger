@@ -13,6 +13,14 @@
 
 #include "panels/CalendarPanel.h"
 
+class TimeLogger : public wxApp
+{
+public:
+    virtual bool OnInit();
+private:
+    Conf cfg;
+};
+
 IMPLEMENT_APP(TimeLogger)
 
 // Load up the user's chosen default frame
