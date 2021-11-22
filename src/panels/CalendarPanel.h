@@ -1,6 +1,8 @@
 #ifndef PANEL_CALENDAR
 #define PANEL_CALENDAR
 
+#include "../widgets/DayLogListControl.h"
+
 #ifndef WX_PRECOMP
     #include <wx/wx.h>
 #endif
@@ -14,6 +16,8 @@ public:
     void OnPaint(wxPaintEvent& evt);
 private:
     wxFrame* parent;
+    // DayLogListControl* list;
+    wxListCtrl* list;
 };
 
 
