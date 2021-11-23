@@ -37,6 +37,15 @@ typedef struct Conf
 
     // Calendar Log
     std::string calendar_title = "MISSING";
+
+    std::string sunday = "MISSING";
+    std::string monday = "MISSING";
+    std::string tuesday = "MISSING";
+    std::string wednesday = "MISSING";
+    std::string thursday = "MISSING";
+    std::string friday = "MISSING";
+    std::string saturday = "MISSING";
+
 } Conf;
 
 class Config

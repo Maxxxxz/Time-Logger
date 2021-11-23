@@ -15,3 +15,10 @@ menu-text:
 
 calendar-log:
   title: "Calendar Log"
+  sunday: "Sunday"
+  monday: "Monday"
+  tuesday: "Tuesday"
+  wednesday: "Wednesday"
+  thursday: "Thursday"
+  friday: "Friday"
+  saturday: "Saturday"

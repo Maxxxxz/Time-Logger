@@ -42,6 +42,14 @@ void Config::loadSettings(const std::string& settings_filename)
         // Calendar Log
         this->cfg.calendar_title = config["calendar-log"]["title"].as<std::string>();
 
+        this->cfg.sunday = config["calendar-log"]["sunday"].as<std::string>();
+        this->cfg.monday = config["calendar-log"]["monday"].as<std::string>();
+        this->cfg.tuesday = config["calendar-log"]["tuesday"].as<std::string>();
+        this->cfg.wednesday = config["calendar-log"]["wednesday"].as<std::string>();
+        this->cfg.thursday = config["calendar-log"]["thursday"].as<std::string>();
+        this->cfg.friday = config["calendar-log"]["friday"].as<std::string>();
+        this->cfg.saturday = config["calendar-log"]["saturday"].as<std::string>();
+
     }
     catch(const std::exception& e)
     {
