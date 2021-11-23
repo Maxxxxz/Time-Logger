@@ -7,7 +7,7 @@
 
 #include "wx/listctrl.h"
 
-class DayLogListControl : public wxListCtrl
+class DayLogListControl : public wxListView
 {
     // Hover event will display an "add" button on the bottom of the list
     // Clicking the "add" button will prompt the add event in which a log is added
