@@ -1,10 +1,10 @@
 #include "CalendarPanel.h"
 
-CalendarPanel::CalendarPanel(wxFrame* parent) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxSUNKEN_BORDER)
 {
     this->parent = parent;
 
     // Connect(wxEVT_PAINT, wxPaintEventHandler(CalendarPanel::OnPaint));
+CalendarPanel::CalendarPanel(wxFrame* parent, Conf* c) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxSUNKEN_BORDER)
 
     // this->list = new DayLogListControl();
     this->list = new wxListCtrl(this);

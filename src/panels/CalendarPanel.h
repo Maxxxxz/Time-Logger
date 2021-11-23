@@ -2,6 +2,7 @@
 #define PANEL_CALENDAR
 
 #include "../widgets/DayLogListControl.h"
+#include "../config.h"
 
 #ifndef WX_PRECOMP
     #include <wx/wx.h>
@@ -10,7 +11,7 @@
 class CalendarPanel : public wxPanel
 {
 public:
-    CalendarPanel(wxFrame* parent);
+    CalendarPanel(wxFrame* parent, Conf* c);
 
     void OnSize(wxSizeEvent& evt);
     void OnPaint(wxPaintEvent& evt);

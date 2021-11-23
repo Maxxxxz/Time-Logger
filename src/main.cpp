@@ -46,8 +46,8 @@ bool TimeLogger::OnInit()
     // Add TaskPanel to Notebook
     // Utilize wxNotebook::SetSelection to set default tab selection
     this->panels = new wxNotebook(frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_TOP);
-    
-    this->panelCalendar = new CalendarPanel((wxFrame*)this->panels);
+
+    this->panelCalendar = new CalendarPanel((wxFrame*)this->panels, &(this->cfg));
     this->panels->AddPage(this->panelCalendar, "Calendar");
 
     this->panelTasks = new TasksPanel((wxFrame*)this->panels);
