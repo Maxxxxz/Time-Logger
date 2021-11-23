@@ -11,5 +11,5 @@ positions:
 
 # The default scaling of all items in the app.
 sizes:
-  top-level-window-length: 500
+  top-level-window-length: 750
   top-level-window-height: 500
