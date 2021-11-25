@@ -16,5 +16,6 @@
     * This might need to be made carefully. Multiple years of use could cause issues with filesize. How to solve?
         * Keep 1 year worth of times before squashing into 1 year file?
 
-* How will the times and tasks be saved?
-    * JSON or YAML?
+
+* Calendar Window
+    * Need to figure out how to display a growable list of widgets for the individual task panels
