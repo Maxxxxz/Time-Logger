@@ -19,6 +19,7 @@ include(${wxWidgets_USE_FILE})
 file(GLOB src_GLOB
   src/**.cpp
   src/panels/**.cpp
+  src/widgets/**.cpp
 )
 
 # Executable
