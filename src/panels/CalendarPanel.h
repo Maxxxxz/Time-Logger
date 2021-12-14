@@ -23,9 +23,10 @@ public:
 private:
     wxFrame* parent;
     // DayLogListControl* list;
-    std::vector<wxListView*> lists;
+    std::vector<wxScrolled<wxPanel>*> lists;
     Conf* cfg;
     std::vector<std::string> DAYS;
+    bool resized = true;
 
 };
 
