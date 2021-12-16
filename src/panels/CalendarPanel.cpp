@@ -30,7 +30,7 @@ CalendarPanel::CalendarPanel(wxFrame* parent, Conf* c) : wxPanel(parent, wxID_AN
     // this->list = new DayLogListControl();
     for(auto i = 0; i < DAYS_OF_WEEK; i++)
     {
-        this->lists.push_back(new DayLogListControl(this, wxID_ANY, wxPoint(size.x*i/7, 0), wxSize(size.x/7, size.y)));
+        this->lists.push_back(new wxScrolled<wxPanel>(this, wxID_ANY, wxPoint(size.x*i/7, 0), wxSize(size.x/7, size.y)));
 
         this->lists[i]->SetBackgroundColour(wxColor(i*1000));
         // Add test data
