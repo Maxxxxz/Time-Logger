@@ -3,10 +3,15 @@
 
 #include <string>
 
+enum FRAMES {
+    CALENDAR = 0,
+    ISSUES = 1
+};
+
 typedef struct Conf
 {
     std::string LANG = "MISSING";
-    int default_open_frame = 0;
+    int default_open_frame = CALENDAR;
 
     // Positons
     int top_level_window_pos_x = 50;
@@ -28,9 +33,19 @@ typedef struct Conf
     // Menu Bar Text
     std::string menu_file = "MISSING";
     std::string menu_help = "MISSING";
+    std::string menu_quit = "MISSING";
 
     // Calendar Log
     std::string calendar_title = "MISSING";
+
+    std::string sunday = "MISSING";
+    std::string monday = "MISSING";
+    std::string tuesday = "MISSING";
+    std::string wednesday = "MISSING";
+    std::string thursday = "MISSING";
+    std::string friday = "MISSING";
+    std::string saturday = "MISSING";
+
 } Conf;
 
 class Config

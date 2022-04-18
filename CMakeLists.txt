@@ -17,7 +17,9 @@ include(${wxWidgets_USE_FILE})
 
 # Add our /src directory as a glob
 file(GLOB src_GLOB
-  src/*.cpp
+  src/**.cpp
+  src/panels/**.cpp
+  src/widgets/**.cpp
 )
 
 # Executable
@@ -26,3 +28,6 @@ add_executable(time-logger ${src_GLOB})
 # Link libraries and add include directories
 target_link_libraries(time-logger ${wxWidgets_LIBRARIES} ${yaml_cpp_LIB})
 target_include_directories(time-logger PRIVATE ${wxWidgets_INCLUDE_DIRS} PRIVATE ${yaml_cpp_INCLUDE})
+
+# Set linker flags
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")

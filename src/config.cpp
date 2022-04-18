@@ -22,7 +22,7 @@ void Config::loadSettings(const std::string& settings_filename)
 
         }
 
-        auto lang_filename = "./lang/" + this->cfg.LANG + ".yaml";
+        auto lang_filename = "../lang/" + this->cfg.LANG + ".yaml";
 
         YAML::Node config = YAML::LoadFile(lang_filename);
 
@@ -37,9 +37,18 @@ void Config::loadSettings(const std::string& settings_filename)
         // Menu Bar
         this->cfg.menu_file = config["menu-text"]["file"].as<std::string>();
         this->cfg.menu_help = config["menu-text"]["help"].as<std::string>();
+        this->cfg.menu_quit = config["menu-text"]["quit"].as<std::string>();
 
         // Calendar Log
         this->cfg.calendar_title = config["calendar-log"]["title"].as<std::string>();
+
+        this->cfg.sunday = config["calendar-log"]["sunday"].as<std::string>();
+        this->cfg.monday = config["calendar-log"]["monday"].as<std::string>();
+        this->cfg.tuesday = config["calendar-log"]["tuesday"].as<std::string>();
+        this->cfg.wednesday = config["calendar-log"]["wednesday"].as<std::string>();
+        this->cfg.thursday = config["calendar-log"]["thursday"].as<std::string>();
+        this->cfg.friday = config["calendar-log"]["friday"].as<std::string>();
+        this->cfg.saturday = config["calendar-log"]["saturday"].as<std::string>();
 
     }
     catch(const std::exception& e)

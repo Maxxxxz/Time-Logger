@@ -9,8 +9,16 @@ about:
          purposes or to develop better time management skills."
 
 menu-text:
-  file: "File"
-  help: "Help"
+  file: "&File"
+  help: "&Help"
+  quit: "&Quit\tCtrl-Q"
 
 calendar-log:
   title: "Calendar Log"
+  sunday: "Sunday"
+  monday: "Monday"
+  tuesday: "Tuesday"
+  wednesday: "Wednesday"
+  thursday: "Thursday"
+  friday: "Friday"
+  saturday: "Saturday"
